@@ -1,0 +1,10 @@
+export gateway_protocol="http"
+export gateway_host="192.168.0.5"
+export gateway_port="80"
+
+export influx_protocol="http"
+export influx_host="192.168.0.2"
+export influx_port="8086"
+export influx_database_name="testdb"
+export influx_username="testadmin"
+export influx_password="testpassword"
