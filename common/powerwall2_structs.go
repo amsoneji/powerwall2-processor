@@ -1,4 +1,4 @@
-package common
+package main
 import "github.com/fatih/structs"
 
 type Meters_aggregates_response struct {
@@ -21,7 +21,7 @@ type Meters_site_solar_response struct {
   Cached_Readings map[string]interface{}  `json:"Cached_readings"`
 }
 
-func Get_all_paths() ([]string){
+func get_all_paths() ([]string){
   return []string{
     "/api/meters/aggregates",
     "/api/meters/site",
@@ -29,7 +29,7 @@ func Get_all_paths() ([]string){
   }
 }
 
-func Get_obj_for_path(path string) (map[string]interface{}, []map[string]interface{}){
+func get_obj_for_path(path string) (map[string]interface{}, []map[string]interface{}){
   switch path {
   case "/api/meters/aggregates":
     return structs.Map(Meters_aggregates_response{}), nil
